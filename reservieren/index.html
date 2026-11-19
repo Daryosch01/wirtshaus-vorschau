@@ -30,7 +30,7 @@
     <meta name="theme-color" content="#E9E0CD">
     <link rel="icon" href="/wirtshaus-vorschau/favicon.svg" type="image/svg+xml">
     <link rel="preload" href="/wirtshaus-vorschau/marke/logo.svg" as="image" type="image/svg+xml">
-    <link rel="preload" as="style" href="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-C3YQfffE.css" /><link rel="modulepreload" as="script" href="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-5ZfZ68X2.js" /><link rel="stylesheet" href="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-C3YQfffE.css" /><script type="module" src="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-5ZfZ68X2.js"></script>
+    <link rel="preload" as="style" href="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-CaNpW9iQ.css" /><link rel="modulepreload" as="script" href="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-CAc3mmXL.js" /><link rel="stylesheet" href="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-CaNpW9iQ.css" /><script type="module" src="https://daryosch01.github.io/wirtshaus-vorschau/build/assets/site-CAc3mmXL.js"></script>
     
     
 
@@ -193,9 +193,20 @@
                 <p class="body-lg">Wir bestätigen telefonisch oder per E-Mail. Kurzfristig? Rufen Sie an: 06188 4493322.</p>
             </div>
 
-            <div class="erfolg" data-erfolg hidden role="status">
-                <p class="kaption">Reservierung vorbereitet</p>
+            
+            <div class="erfolg" data-erfolg hidden role="status" tabindex="-1">
+                <p class="kaption" data-erfolg-titel>Reservierung vorbereitet</p>
                 <p data-erfolg-text></p>
+            </div>
+
+            
+            <div class="erfolg fehlschlag" data-fehlschlag hidden role="alert" tabindex="-1">
+                <p class="kaption">Das hat leider nicht geklappt</p>
+                <p data-fehlschlag-text>Ihre Anfrage konnte gerade nicht gesendet werden. Bitte rufen Sie uns an oder schicken Sie die Anfrage per E-Mail, Ihre Angaben bleiben erhalten.</p>
+                <div class="knopfreihe">
+                    <a class="knopf knopf-voll" href="tel:+4961884493322">06188 4493322</a>
+                    <button type="button" class="knopf" data-per-mail>Per E-Mail senden</button>
+                </div>
             </div>
 
             <noscript>
@@ -204,8 +215,17 @@
                 <a href="mailto:kontakt@wirtshausamsee-kahl.de">kontakt@wirtshausamsee-kahl.de</a>.</p>
             </noscript>
 
+            
             <form class="formular" data-reservierung novalidate
+                  data-versand="mailto"
+                  data-aktion="/wirtshaus-vorschau/!/forms/reservierung" data-token="/wirtshaus-vorschau/formular/token"
                   data-email="kontakt@wirtshausamsee-kahl.de" data-telefon="06188 4493322" data-max="9">
+
+                
+                <div class="feld-falle" aria-hidden="true">
+                    <label for="rueckfrage_feld">Dieses Feld bitte leer lassen</label>
+                    <input type="text" id="rueckfrage_feld" name="rueckfrage_feld" tabindex="-1" autocomplete="off">
+                </div>
 
                 <fieldset>
                     <legend class="feld-legende">Wunschtermin</legend>
@@ -250,7 +270,7 @@
                     </div>
                 </fieldset>
 
-                <button type="submit" class="knopf knopf-voll knopf-breit">Reservierung anfragen</button>
+                <button type="submit" class="knopf knopf-voll knopf-breit" data-senden>Reservierung anfragen</button>
                 <p class="kaption formular-fuss">Ihr E-Mail-Programm öffnet sich mit der fertigen Anfrage. Pflichtfelder mit *.<br>
                 Wie wir mit Ihren Angaben umgehen, steht in der <a href="/wirtshaus-vorschau/datenschutz">Datenschutzerklärung</a>.</p>
             </form>

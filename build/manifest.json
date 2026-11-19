@@ -216,7 +216,7 @@
     "src": "node_modules/@fontsource/manrope/files/manrope-vietnamese-700-normal.woff2"
   },
   "resources/css/site.css": {
-    "file": "assets/site-C3YQfffE.css",
+    "file": "assets/site-CaNpW9iQ.css",
     "name": "site",
     "names": [
       "site.css"
@@ -281,7 +281,7 @@
     ]
   },
   "resources/js/site.js": {
-    "file": "assets/site-5ZfZ68X2.js",
+    "file": "assets/site-CAc3mmXL.js",
     "name": "site",
     "src": "resources/js/site.js",
     "isEntry": true
